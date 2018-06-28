@@ -37,7 +37,13 @@ public class Line {
 
     @Override
     public int hashCode() {
+        int result = 17;
 
-        return super.hashCode();
+        result = 31 * result + xStart;
+        result = 31 * result + xEnd;
+        result = 31 * result + yStart;
+        result = 31 * result + yEnd;
+
+        return result;
     }
 }
