@@ -14,6 +14,14 @@ public class LineTest {
     }
 
     @Test
+    public void testLineIfSwapped() {
+        Line line = new Line(0,2,0,0);
+        Line secondLine = new Line(0,0,0,2);
+
+        assertEquals(line, secondLine);
+    }
+
+    @Test
     public void testCalculateDistance(){
         Line line = new Line(0,0,0,0);
         Line secondLine = new Line(-3,-4,0,0);

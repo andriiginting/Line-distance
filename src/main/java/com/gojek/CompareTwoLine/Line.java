@@ -17,14 +17,22 @@ public class Line {
 
         if (!(obj instanceof Line)) return false;
         Line objectToCompare = (Line) obj;
-        return objectToCompare.xStart == this.xStart &&
+        if ((objectToCompare.xStart == this.xStart &&
                 objectToCompare.yStart == this.yStart &&
                 objectToCompare.xEnd == this.xEnd &&
-                objectToCompare.yEnd == this.yEnd ;
+                objectToCompare.yEnd == this.yEnd) ||
+                (objectToCompare.xStart == this.xEnd &&
+                        objectToCompare.yStart == this.yEnd &&
+                        objectToCompare.xEnd == this.xStart &&
+                        objectToCompare.yEnd == this.yStart)) {
+            return true;
+        }
+
+        return false;
     }
 
-    public double calculateDistance(){
-        return Math.sqrt(Math.pow((this.xStart-this.xEnd),2) + Math.pow((this.yStart-this.yEnd),2));
+    public double calculateDistance() {
+        return Math.sqrt(Math.pow((this.xStart - this.xEnd), 2) + Math.pow((this.yStart - this.yEnd), 2));
     }
 
     @Override
