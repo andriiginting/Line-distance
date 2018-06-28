@@ -22,4 +22,8 @@ public class Line {
                 objectToCompare.xEnd == this.xEnd &&
                 objectToCompare.yEnd == this.yEnd;
     }
+
+    public double calculateDistance(){
+        return Math.sqrt(Math.pow((this.xStart-this.xEnd),2) + Math.pow((this.yStart-this.yEnd),2));
+    }
 }
