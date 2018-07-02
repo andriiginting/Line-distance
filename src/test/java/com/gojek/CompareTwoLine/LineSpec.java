@@ -3,7 +3,7 @@ package com.gojek.CompareTwoLine;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class LineTest {
+public class LineSpec {
 
     @Test
     public void testTwoLineIsEqual(){
@@ -44,13 +44,20 @@ public class LineTest {
     @Test
     public void testCalculateDistance(){
         Line line = new Line(0,0,0,0);
-        assertEquals(0, line.calculateDistance(),0);
+        assertEquals(0, line.getLength(),0);
     }
 
     @Test
     public void testCalculateDistanceNegative(){
         Line line    = new Line(0,0,-3,-4);
-        assertEquals(5, line.calculateDistance(),0);
+        assertEquals(5, line.getLength(),0);
     }
 
+    @Test
+    public void testHashCodeExactSameLine(){
+        Line line = new Line(0,1,1,1);
+        Line secondLine = new Line(0,1,1,1);
+
+        assertEquals(line.hashCode(), secondLine.hashCode());
+    }
 }

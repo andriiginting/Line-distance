@@ -31,7 +31,7 @@ public class Line {
         return false;
     }
 
-    public double calculateDistance() {
+    public double getLength() {
         return Math.sqrt(Math.pow((this.xStart - this.xEnd), 2) + Math.pow((this.yStart - this.yEnd), 2));
     }
 
