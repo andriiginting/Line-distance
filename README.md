@@ -1,18 +1,27 @@
-Project Name: CompareTwoLines
-Project Description: 
-"this project about comparing two lines and calculate distance between two points"
+# CompareTwoLines
 
-Dev Env Setup: 
-"intellij/java sdk/gradle 4.8.1"
+### Project Description:
+this project about comparing two lines and calculate distance between two points
 
-Build Instructions: 
+Dev Env Setup:
+```
+intellij/java sdk/gradle 4.8.1
+```
+
+Build Instructions:
+```
 ./gradlew build
+```
 
-Run Instructions: 
+Run Instructions:
+```
 ./gradlew run
+```
 
 Test Instructions:
+```
 ./gradlew clean test
+```
 
 Authors
 Andri Ginting & Vincent S Bensawan
